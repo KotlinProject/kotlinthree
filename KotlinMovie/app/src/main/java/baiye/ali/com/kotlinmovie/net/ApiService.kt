@@ -11,6 +11,6 @@ import retrofit2.http.GET
 interface ApiService {
     @GET("v2/feed?num=2&udid=26868b32e808498db32fd51fb422d00175e179df&vc=83")
     fun getHomeData():Flowable<HomeBean>
-    @GET()
-    fun getDiscoverData():Flowable<DiscoverBean>
+    @GET("v2/categories?udid=26868b32e808498db32fd51fb422d00175e179df&vc=83")
+    fun getDiscoverData():Flowable<List<DiscoverBean>>
 }

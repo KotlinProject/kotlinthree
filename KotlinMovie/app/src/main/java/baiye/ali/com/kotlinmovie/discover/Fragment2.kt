@@ -1,6 +1,7 @@
 package baiye.ali.com.kotlinmovie.discover
 
 import android.support.v7.widget.RecyclerView
+import android.util.Log
 import android.view.View
 import baiye.ali.com.kotlinmovie.BaseFragment
 import baiye.ali.com.kotlinmovie.R
@@ -12,8 +13,8 @@ import baiye.ali.com.kotlinmovie.discover.view.DiscoverView
  * Created by 31962 on 2017/12/27.
  */
 class Fragment2 : BaseFragment<DiscoverPresenter>(),DiscoverView{
-    override fun DiscoverV(discoverBean: DiscoverBean) {
-
+    override fun DiscoverV(discoverBean: List<DiscoverBean>) {
+        Log.i("TAG",discoverBean.get(0).name)
     }
 
 
@@ -24,7 +25,7 @@ class Fragment2 : BaseFragment<DiscoverPresenter>(),DiscoverView{
     }
 
     override fun initData() {
-        presenter
+        presenter!!.DiscoverP()
     }
 
     override fun initView(view: View?) {

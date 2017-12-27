@@ -11,7 +11,7 @@ import io.reactivex.Flowable
  */
 class DiscoverModel (){
 
-    fun DiscoverM() : Flowable<DiscoverBean>{
+    fun DiscoverM() : Flowable<List<DiscoverBean>>{
         val instance = Retrofitutil.getInstance(Api.BASE_URL)
         val apiService = instance.create(ApiService::class.java)
         val flowable = apiService!!.getDiscoverData()
