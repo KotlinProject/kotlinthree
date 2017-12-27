@@ -9,7 +9,7 @@ import baiye.ali.com.kotlinmovie.R
  */
 class Fragment4 : BaseFragment<MePresenter>(),View.OnClickListener {
     override fun getPresenter(): MePresenter {
-        var mepresenter = MePresenter()
+        var mepresenter:MePresenter = MePresenter()
         return mepresenter
     }
 

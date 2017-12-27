@@ -9,7 +9,7 @@ import baiye.ali.com.kotlinmovie.R
  */
 class Fragment2 : BaseFragment<DiscoverPresenter>() {
     override fun getPresenter(): DiscoverPresenter {
-        var discoverpresenter = DiscoverPresenter()
+        var discoverpresenter : DiscoverPresenter = DiscoverPresenter()
         return discoverpresenter
 
     }
