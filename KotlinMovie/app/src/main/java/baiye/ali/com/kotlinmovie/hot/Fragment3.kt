@@ -9,7 +9,7 @@ import baiye.ali.com.kotlinmovie.R
  */
 class Fragment3 : BaseFragment<HotPresenter>() {
     override fun getPresenter(): HotPresenter {
-        var hotpresenter = HotPresenter()
+        var hotpresenter :HotPresenter= HotPresenter()
         return hotpresenter
 
     }

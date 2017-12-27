@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.fragment4.*
 class Fragment4 : BaseFragment<MePresenter>(){
 
     override fun getPresenter(): MePresenter {
-        var mepresenter = MePresenter()
+        var mepresenter:MePresenter = MePresenter()
         return mepresenter
     }
 
