@@ -12,10 +12,11 @@
         android:orientation="horizontal">
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:padding="8dp"
-            android:src="@mipmap/ic_back_24dp"/>
+            android:id="@+id/fan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:src="@drawable/ic_back_24dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -69,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:padding="15dp"
-           android:src="@mipmap/contact_author" />
+            android:src="@drawable/contact_email"/>
 
         <TextView
             android:layout_width="wrap_content"
