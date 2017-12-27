@@ -16,7 +16,7 @@ class Fragment1 : BaseFragment() {
     }
 
     override fun initview() {
-      //  rcy_frag1.layoutManager = LinearLayoutManager(activity)
+      
 
     }
 
