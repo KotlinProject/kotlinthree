@@ -18,7 +18,5 @@ class HostModel {
         return homeData
     }
 
-    /*fun Searchdata2():Flowable<>{
 
-    }*/
 }
