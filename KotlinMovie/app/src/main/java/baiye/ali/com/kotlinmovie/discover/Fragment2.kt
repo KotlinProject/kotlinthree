@@ -19,7 +19,7 @@ class Fragment2 : BaseFragment<DiscoverPresenter>() {
     }
 
     override fun initData() {
-
+        presenter
     }
 
     override fun initView(view: View?) {
