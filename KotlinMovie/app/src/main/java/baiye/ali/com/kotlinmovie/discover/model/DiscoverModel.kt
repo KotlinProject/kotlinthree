@@ -9,7 +9,8 @@ import io.reactivex.Flowable
 /**
  * Created by dy on 2017/12/27.
  */
-class DiscoverModel (){
+
+class DiscoverModel {
 
     fun DiscoverM() : Flowable<List<DiscoverBean>>{
         val instance = Retrofitutil.getInstance(Api.BASE_URL)

@@ -13,7 +13,10 @@ import kotlinx.android.synthetic.main.fragment1.*
 class Fragment1 : BaseFragment<HostPresenter>(),Frag1View {
     override fun getdata(homeBean: HomeBean) {
 
+        val date = homeBean.issueList!!.get(1).date
+
         
+
 
     }
 
