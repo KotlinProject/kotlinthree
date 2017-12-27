@@ -17,4 +17,8 @@ class HostModel {
         val homeData = service!!.getHomeData()
         return homeData
     }
+
+    /*fun Searchdata2():Flowable<>{
+
+    }*/
 }
