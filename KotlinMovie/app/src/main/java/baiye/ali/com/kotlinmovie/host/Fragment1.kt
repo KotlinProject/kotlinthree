@@ -16,7 +16,7 @@ class Fragment1 : BaseFragment() {
     }
 
     override fun initview() {
-      
+
 
     }
 
