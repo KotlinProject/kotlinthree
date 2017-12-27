@@ -13,10 +13,13 @@ abstract class BaseFragment :Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater!!.inflate(getlayoutId(), container, false)
+        initview()
         return view
     }
 
     abstract fun getlayoutId():Int
+
+    abstract fun initview()
 
 
 }
