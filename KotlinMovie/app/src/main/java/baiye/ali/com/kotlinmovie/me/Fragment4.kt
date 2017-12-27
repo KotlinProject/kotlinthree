@@ -7,7 +7,21 @@ import baiye.ali.com.kotlinmovie.R
 /**
  * Created by 31962 on 2017/12/27.
  */
-class Fragment4 : BaseFragment(),View.OnClickListener {
+class Fragment4 : BaseFragment<MePresenter>(),View.OnClickListener {
+    override fun getPresenter(): MePresenter {
+        var mepresenter = MePresenter()
+        return mepresenter
+    }
+
+    override fun initData() {
+
+    }
+
+    override fun initView(view: View?) {
+
+
+    }
+
     override fun onClick(v: View?) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
 
@@ -16,18 +30,9 @@ class Fragment4 : BaseFragment(),View.OnClickListener {
 }
 
 
-    override fun initview() {
-
-        /*tv_tx.setOnClickListener(this)
-        tv_like.setOnClickListener(this)
-        tv_save.setOnClickListener(this)
-        tv_watch.setOnClickListener(this)
-        tv_advise.setOnClickListener(this)*/
-
-
-    }
 
     override fun getlayoutId(): Int {
+
 
         return R.layout.fragment4
     }
