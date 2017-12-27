@@ -15,8 +15,9 @@ class Fragment1 : BaseFragment<HostPresenter>(),Frag1View {
 
         val date = homeBean.issueList!!.get(1).date
 
-        
+        val itemList = homeBean.issueList!!.get(1).itemList
 
+        
 
     }
 
