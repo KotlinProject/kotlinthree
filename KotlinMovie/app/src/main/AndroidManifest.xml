@@ -19,7 +19,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".me.activity.UpdownActivity" />
         <activity android:name=".me.activity.SavaActivity" />
         <activity android:name=".me.activity.WatchsActivity" />
         <activity android:name=".me.activity.AdviseActivity" />
