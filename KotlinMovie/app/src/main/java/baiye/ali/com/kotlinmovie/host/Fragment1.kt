@@ -28,7 +28,7 @@ class Fragment1 : BaseFragment<HostPresenter>(),Frag1View {
        // val playUrl1 = homeBean.issueList!![1].itemList!![1].data!!.playUrl
 
         var list = ArrayList<ChildHomeBean>()
-        for (i in itemList!!) {
+        for (i in itemList!!.indices) {
 
            /* val image = i?.data!!.image!!
             val title = i?.data!!.title!!
@@ -38,15 +38,19 @@ class Fragment1 : BaseFragment<HostPresenter>(),Frag1View {
             var childhomebean: ChildHomeBean? = ChildHomeBean(image!!, title!!, description!!, playUrl!!)!!
             list!!.add(childhomebean!!)*/
 
-            val data = i!!.data
-            val title = data!!.title
-            val icon = data!!.icon
-            val description = data!!.description
-            val playUrl = data!!.playUrl
+            if(i!=0){
+                val itemListBean = itemList[i]
+                val data = itemListBean.data
+                val title = data!!.title
+                val detail = data!!.cover?.detail
+                val description = data!!.description
+                val playUrl = data!!.playUrl
 
 
-            var childhomebean: ChildHomeBean? = ChildHomeBean(icon.toString(), title.toString(), description.toString(), playUrl.toString())
-            list!!.add(childhomebean!!)
+                var childhomebean: ChildHomeBean? = ChildHomeBean(detail.toString(), title.toString(), description.toString(), playUrl.toString())
+                list!!.add(childhomebean!!)
+            }
+
 
         }
 
