@@ -2,7 +2,6 @@ package baiye.ali.com.kotlinmovie.host
 
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
-import android.widget.Toast
 import baiye.ali.com.kotlinmovie.BaseFragment
 import baiye.ali.com.kotlinmovie.R
 import baiye.ali.com.kotlinmovie.bean.ChildHomeBean
@@ -74,7 +73,7 @@ class Fragment1 : BaseFragment<HostPresenter>(),Frag1View {
         iv_frag1_search.setOnClickListener(object :View.OnClickListener{
             override fun onClick(v: View?) {
 
-                Toast.makeText(activity,"啦啦",Toast.LENGTH_LONG).show()
+               
             }
 
         })
