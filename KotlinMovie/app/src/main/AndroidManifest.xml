@@ -22,7 +22,9 @@
         <activity android:name=".me.activity.UpdownActivity" />
         <activity android:name=".me.activity.SavaActivity" />
         <activity android:name=".me.activity.WatchsActivity" />
-        <activity android:name=".me.activity.AdviseActivity"></activity>
+        <activity android:name=".me.activity.AdviseActivity" />
+        <activity android:name=".discover.DiscoverListActivity" />
+        <activity android:name=".BaseActivity"></activity>
     </application>
 
 </manifest>
