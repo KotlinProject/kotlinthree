@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="baiye.ali.com.kotlinmovie.discover.DiscoverListActivity">
     <android.support.v7.widget.Toolbar
+        android:id="@+id/discover_list_tool"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></android.support.v7.widget.Toolbar>
-</LinearLayout>
+        android:layout_height="?attr/actionBarSize"
+        android:background="#ffffff"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        ></android.support.v7.widget.Toolbar>
+
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/discover_list_xrecyclerview"
+        android:layout_below="@+id/discover_list_tool"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+</RelativeLayout>

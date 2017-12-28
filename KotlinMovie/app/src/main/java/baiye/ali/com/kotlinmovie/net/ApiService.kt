@@ -2,6 +2,7 @@ package baiye.ali.com.kotlinmovie.net
 
 import baiye.ali.com.kotlinmovie.bean.HomeBean
 import baiye.ali.com.kotlinmovie.discover.bean.DiscoverBean
+import baiye.ali.com.kotlinmovie.discover.bean.DiscoverlListBean
 import io.reactivex.Flowable
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -18,6 +19,9 @@ interface ApiService {
 
     @GET("v2/feed")
     fun getHomeMoreData(@Query("date")date:String,@Query("num")num:String) : Flowable<HomeBean>
+
+    @GET("v3/videos")
+    fun getDiscoverListData(@Query("categoryName") categoryName:String,@Query("strategy") strategy : String ,@Query("udid") udid : String,@Query("vc") vc:String) : Flowable<DiscoverlListBean>
 
 
 }
