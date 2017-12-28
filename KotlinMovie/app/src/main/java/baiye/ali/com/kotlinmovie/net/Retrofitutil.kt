@@ -51,7 +51,4 @@ class Retrofitutil private constructor(baseurl:String){
         }
         return retrofit?.create(service)
     }
-
-
-
 }
