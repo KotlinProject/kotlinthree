@@ -17,7 +17,7 @@ class AdviseActivity : AppCompatActivity() {
         setContentView(R.layout.activity_advise)
 
         //返回上一层
-        fan.setOnClickListener(object : View.OnClickListener{
+        advise_fan.setOnClickListener(object : View.OnClickListener{
             override fun onClick(v: View?) {
 
                finish()

@@ -21,7 +21,6 @@ import java.io.File
  */
 class Fragment4 : BaseFragment<MePresenter>(){
 
-    private var mBitmap: Bitmap? = null
     protected val CHOOSE_PICTURE = 0
     protected val TAKE_PICTURE = 1
     private val CROP_SMALL_PICTURE = 2
@@ -40,13 +39,13 @@ class Fragment4 : BaseFragment<MePresenter>(){
     override fun initView(view: View?) {
 
        //上传头像
-        tv_tx.setOnClickListener(object :View.OnClickListener{
+        image.setOnClickListener(object :View.OnClickListener{
             override fun onClick(v: View?) {
 
-                /*var intent = Intent(activity, UpdownActivity::class.java)
+              /*  var intent = Intent(activity, UpdownActivity::class.java)
                 startActivity(intent)*/
 
-                showChoosePicDialog()
+               showChoosePicDialog()
 
             }
         })
@@ -83,7 +82,6 @@ class Fragment4 : BaseFragment<MePresenter>(){
             }
         })
 
-
     }
 
 
@@ -104,15 +102,15 @@ class Fragment4 : BaseFragment<MePresenter>(){
 
         builder.setItems(items) { dialog, which ->
             when (which) {
-            // 选择本地照片
+             // 选择本地照片
                 CHOOSE_PICTURE -> {
-                    val openAlbumIntent = Intent(
-                            Intent.ACTION_GET_CONTENT)
+                    val openAlbumIntent = Intent(Intent.ACTION_GET_CONTENT)
                     openAlbumIntent.type = "image/*"
                     //用startActivityForResult方法，重写onActivityResult()方法，拿到图片做裁剪操作
-                    startActivityForResult(openAlbumIntent, CHOOSE_PICTURE)
+                    startActivityForResult(openAlbumIntent,CHOOSE_PICTURE)
+
                 }
-             // 拍照
+              // 拍照
                 TAKE_PICTURE-> {
                     val openCameraIntent = Intent(
                             MediaStore.ACTION_IMAGE_CAPTURE)
@@ -125,6 +123,21 @@ class Fragment4 : BaseFragment<MePresenter>(){
             }
         }
         builder.show()
+
+    }
+
+
+    //图片裁剪
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+            when (requestCode) {
+                TAKE_PICTURE -> cutImage(tempUri) // 对图片进行裁剪处理
+                CHOOSE_PICTURE -> cutImage(data!!.data) // 对图片进行裁剪处理
+                CROP_SMALL_PICTURE -> if (data != null) {
+                    setImageToView(data) // 裁剪得到的图片显示在界面上
+                }
+            }
 
     }
 
@@ -157,11 +170,10 @@ class Fragment4 : BaseFragment<MePresenter>(){
         protected fun setImageToView(data: Intent) {
             val extras = data.extras
             if (extras != null) {
-                mBitmap = extras.getParcelable<Bitmap>("data")
+               var  mBitmap = extras.getParcelable<Bitmap>("data")
                 //利用工具将头像切成圆形
-                tv_tx.setImageBitmap(mBitmap)//显示图片
+                image.setImageBitmap(mBitmap)//显示图片
 
             }
         }
-
 }
