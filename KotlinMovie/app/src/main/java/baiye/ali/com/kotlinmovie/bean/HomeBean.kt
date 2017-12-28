@@ -78,7 +78,16 @@ class HomeBean {
                 var labelList: Any? = null
                 var header: Any? = null
                 var playUrl: String? = null
-                var icon: String? = null
+                //var icon: String? = null
+                var cover: CoverBean? = null
+
+                class CoverBean {
+                    var blurred: String? = null
+                    var detail: String? = null
+                    var feed: String? = null
+                    var homepage: String? = null
+
+                }
             }
         }
     }

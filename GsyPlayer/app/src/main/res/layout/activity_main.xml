@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="baiye.ali.com.kotlinmovie.play.PlayActivity">
+    tools:context="baiye.ali.com.gsyplayer.MainActivity"
+    android:orientation="vertical">
 
 
 
