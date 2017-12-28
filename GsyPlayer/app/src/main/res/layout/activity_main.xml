@@ -7,6 +7,11 @@
     tools:context="baiye.ali.com.gsyplayer.MainActivity"
     android:orientation="vertical">
 
+    <com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer
+        android:id="@+id/gsy_player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
+    </com.shuyu.gsyvideoplayer.video.StandardGSYVideoPlayer>
 
 </LinearLayout>

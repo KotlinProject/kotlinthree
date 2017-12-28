@@ -58,9 +58,6 @@ class Fragment1 : BaseFragment<HostPresenter>(),Frag1View {
         rcy_frag1.adapter = hostAdapter
 
 
-
-
-
     }
 
     override fun getPresenter(): HostPresenter {
