@@ -1,9 +1,11 @@
 package baiye.ali.com.kotlinmovie.host
 
+import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import android.widget.Toast
 import baiye.ali.com.kotlinmovie.BaseFragment
 import baiye.ali.com.kotlinmovie.R
+import baiye.ali.com.kotlinmovie.bean.ChildHomeBean
 import baiye.ali.com.kotlinmovie.bean.HomeBean
 import kotlinx.android.synthetic.main.fragment1.*
 
@@ -21,24 +23,37 @@ class Fragment1 : BaseFragment<HostPresenter>(),Frag1View {
       //  homeBean!!.issueList!![1]!!.itemList!![5]!!.data!!.
        // homeBean.issueList!![1].itemList!![1]!!.data!!.playUrl
 
-        //val itemList = homeBean.issueList!![1].itemList
+        val itemList = homeBean.issueList!![1].itemList
 
-        val playUrl1 = homeBean.issueList!![1].itemList!![1].data!!.playUrl
+       // val playUrl1 = homeBean.issueList!![1].itemList!![1].data!!.playUrl
 
-        Toast.makeText(activity,playUrl1,Toast.LENGTH_LONG).show()
+        var list = ArrayList<ChildHomeBean>()
+        for (i in itemList!!) {
 
-        /*for (i in itemList!!){
+           /* val image = i?.data!!.image!!
+            val title = i?.data!!.title!!
+            val description = i?.data!!.description!!
+            val playUrl = i?.data!!.playUrl!!
 
-            val image = i.data!!.image
-            val title = i.data!!.title
-            val description = i.data!!.description
-            val playUrl = i.data!!.playUrl
+            var childhomebean: ChildHomeBean? = ChildHomeBean(image!!, title!!, description!!, playUrl!!)!!
+            list!!.add(childhomebean!!)*/
 
-            var childhomebean : ChildHomeBean = ChildHomeBean(image!!,title!!,description!!,playUrl!!)
+            val data = i!!.data
+            val title = data!!.title
+            val icon = data!!.icon
+            val description = data!!.description
+            val playUrl = data!!.playUrl
 
 
+            var childhomebean: ChildHomeBean? = ChildHomeBean(icon.toString(), title.toString(), description.toString(), playUrl.toString())
+            list!!.add(childhomebean!!)
 
-        }*/
+        }
+
+        val hostAdapter = HostAdapter(list, activity)
+        rcy_frag1.adapter = hostAdapter
+
+
 
 
 
@@ -62,6 +77,9 @@ class Fragment1 : BaseFragment<HostPresenter>(),Frag1View {
             }
 
         })
+
+        rcy_frag1.layoutManager = LinearLayoutManager(activity)
+
     }
 
     override fun getlayoutId(): Int {

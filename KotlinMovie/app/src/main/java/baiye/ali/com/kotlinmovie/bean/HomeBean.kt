@@ -71,14 +71,14 @@ class HomeBean {
                 var id: Int = 0
                 var title: String? = null
                 var description: String? = null
-                var image: String? = null
                 var actionUrl: String? = null
                 var adTrack: Any? = null
                 var isShade: Boolean = false
                 var label: Any? = null
                 var labelList: Any? = null
                 var header: Any? = null
-                var playUrl:String? = null
+                var playUrl: String? = null
+                var icon: String? = null
             }
         }
     }
