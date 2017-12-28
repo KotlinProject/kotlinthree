@@ -23,10 +23,9 @@
         <activity android:name=".me.activity.SavaActivity" />
         <activity android:name=".me.activity.WatchsActivity" />
         <activity android:name=".me.activity.AdviseActivity" />
-
         <activity android:name=".discover.DiscoverListActivity" />
-        <activity android:name=".BaseActivity"></activity>
-
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".play.PlayActivity"></activity>
     </application>
 
 </manifest>
