@@ -73,7 +73,7 @@ class Fragment1 : BaseFragment<HostPresenter>(),Frag1View {
         iv_frag1_search.setOnClickListener(object :View.OnClickListener{
             override fun onClick(v: View?) {
 
-               
+
             }
 
         })
