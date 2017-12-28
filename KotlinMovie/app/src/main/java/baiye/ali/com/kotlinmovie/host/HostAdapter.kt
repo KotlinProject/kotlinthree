@@ -1,6 +1,7 @@
 package baiye.ali.com.kotlinmovie.host
 
 import android.content.Context
+import android.content.Intent
 import android.net.Uri
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import baiye.ali.com.kotlinmovie.R
 import baiye.ali.com.kotlinmovie.bean.ChildHomeBean
+import baiye.ali.com.kotlinmovie.play.PlayActivity
 import com.facebook.drawee.view.SimpleDraweeView
 
 /**
@@ -30,7 +32,10 @@ import com.facebook.drawee.view.SimpleDraweeView
         holder!!.ll1.setOnClickListener(object :View.OnClickListener{
             override fun onClick(v: View?) {
 
-                
+                val intent = Intent()
+                intent.setClass(context, PlayActivity::class.java)
+                intent.putExtra("playurl",list.get(position).playUrl)
+                context.startActivity(intent)
             }
 
         })
