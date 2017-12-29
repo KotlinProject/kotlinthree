@@ -14,34 +14,32 @@
             android:id="@+id/iv_back_Search"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_back_24dp"
-            />
-        <EditText
-            android:id="@+id/et_Search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="帮你找到感兴趣的内容"/>
-        <ImageView
-            android:id="@+id/iv_search_search"
+            android:src="@drawable/ic_back_24dp"/>
+
+        <TextView
+            android:id="@+id/tv_content"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_search_bg_24dp"/>
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:text="哈哈"
+            android:textSize="25sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="相关"
+            android:textSize="25sp"/>
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="输入标题或描述中的关键词找到更多视频"/>
+    <com.jcodecraeer.xrecyclerview.XRecyclerView
+        android:id="@+id/xrv_search"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="30dp"
-        android:textStyle="bold"
-        android:text="--热门搜索词--"/>
+    </com.jcodecraeer.xrecyclerview.XRecyclerView>
+
+
 
 
 

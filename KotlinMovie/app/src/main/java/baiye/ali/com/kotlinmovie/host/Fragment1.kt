@@ -7,7 +7,7 @@ import baiye.ali.com.kotlinmovie.BaseFragment
 import baiye.ali.com.kotlinmovie.R
 import baiye.ali.com.kotlinmovie.bean.ChildHomeBean
 import baiye.ali.com.kotlinmovie.bean.HomeBean
-import baiye.ali.com.kotlinmovie.search.SearchActivity
+import baiye.ali.com.kotlinmovie.search.EditActivity
 import kotlinx.android.synthetic.main.fragment1.*
 
 /**
@@ -77,7 +77,7 @@ class Fragment1 : BaseFragment<HostPresenter>(),Frag1View {
             override fun onClick(v: View?) {
 
                 var intent = Intent()
-                intent.setClass(activity,SearchActivity::class.java)
+                intent.setClass(activity,EditActivity::class.java)
                 startActivity(intent)
 
             }
