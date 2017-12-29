@@ -25,7 +25,14 @@
         <activity android:name=".discover.DiscoverListActivity" />
         <activity android:name=".BaseActivity" />
         <activity android:name=".play.PlayActivity" />
-        <activity android:name=".search.SearchActivity"></activity>
+        <activity android:name=".search.SearchActivity" />
+        <activity android:name=".GuideActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
