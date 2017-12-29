@@ -1,4 +1,4 @@
-package baiye.ali.com.kotlinmovie
+package baiye.ali.com.kotlinmovie.utils
 
 import android.app.Activity
 import android.content.Context
