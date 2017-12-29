@@ -24,8 +24,8 @@
         <activity android:name=".me.activity.AdviseActivity" />
         <activity android:name=".discover.DiscoverListActivity" />
         <activity android:name=".BaseActivity" />
-        <activity android:name=".play.PlayActivity"></activity>
-
+        <activity android:name=".play.PlayActivity" />
+        <activity android:name=".search.SearchActivity"></activity>
     </application>
 
 </manifest>

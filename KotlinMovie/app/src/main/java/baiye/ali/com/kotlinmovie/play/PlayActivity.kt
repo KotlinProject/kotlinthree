@@ -13,7 +13,6 @@ class PlayActivity : AppCompatActivity() {
         setContentView(R.layout.activity_play)
 
         var playurl = intent.getStringExtra("playurl")
-
         videoplayer.setUp(playurl
                 , JZVideoPlayerStandard.SCREEN_WINDOW_NORMAL, "飙车");
 

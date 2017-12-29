@@ -1,6 +1,7 @@
 package baiye.ali.com.kotlinmovie.net
 
 import baiye.ali.com.kotlinmovie.bean.HomeBean
+import baiye.ali.com.kotlinmovie.bean.SearchBean
 import baiye.ali.com.kotlinmovie.discover.bean.DiscoverBean
 import baiye.ali.com.kotlinmovie.discover.bean.DiscoverlListBean
 import io.reactivex.Flowable
@@ -22,6 +23,11 @@ interface ApiService {
 
     @GET("v3/videos")
     fun getDiscoverListData(@Query("categoryName") categoryName:String,@Query("strategy") strategy : String ,@Query("udid") udid : String,@Query("vc") vc:String) : Flowable<DiscoverlListBean>
+
+    @GET("v1/search")
+    fun getSearchData(@Query("num")num: Int,@Query("query")query: String,@Query("start")start:Int):Flowable<SearchBean>
+
+
 
 
 }

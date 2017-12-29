@@ -1,11 +1,13 @@
 package baiye.ali.com.kotlinmovie.host
 
+import android.content.Intent
 import android.support.v7.widget.LinearLayoutManager
 import android.view.View
 import baiye.ali.com.kotlinmovie.BaseFragment
 import baiye.ali.com.kotlinmovie.R
 import baiye.ali.com.kotlinmovie.bean.ChildHomeBean
 import baiye.ali.com.kotlinmovie.bean.HomeBean
+import baiye.ali.com.kotlinmovie.search.SearchActivity
 import kotlinx.android.synthetic.main.fragment1.*
 
 /**
@@ -73,6 +75,9 @@ class Fragment1 : BaseFragment<HostPresenter>(),Frag1View {
         iv_frag1_search.setOnClickListener(object :View.OnClickListener{
             override fun onClick(v: View?) {
 
+                var intent = Intent()
+                intent.setClass(activity,SearchActivity::class.java)
+                startActivity(intent)
 
             }
 
