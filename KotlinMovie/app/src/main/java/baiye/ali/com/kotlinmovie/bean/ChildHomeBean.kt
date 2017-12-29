@@ -9,4 +9,9 @@ class ChildHomeBean(val icon:String,
                     val playUrl:String
                     ) {
 
+
+
+
+
+
 }
