@@ -19,19 +19,20 @@ class HotPresenter(hotView: HotView) {
 
         flowable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribeWith(object : DisposableSubscriber<List<HotBean>>() {
-                    override fun onComplete() {
-                    }
-
-                    override fun onNext(t: List<HotBean>?) {
-                        //把数据给view
-                        hotView!!.getdata(t!!)
-                    }
-
+                .subscribeWith(object : DisposableSubscriber<HotBean>() {
                     override fun onError(t: Throwable?) {
                     }
 
+                    override fun onComplete() {
+                    }
+
+                    override fun onNext(t: HotBean?) {
+
+                        hotView.getdata(t!!)
+                    }
+
                 })
+
 
 //
 //    fun relevance() {

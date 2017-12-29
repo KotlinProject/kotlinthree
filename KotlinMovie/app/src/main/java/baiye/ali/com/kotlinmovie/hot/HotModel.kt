@@ -12,7 +12,7 @@ import retrofit2.converter.gson.GsonConverterFactory
  */
 class HotModel {
 
-    fun getServerData(): Flowable<List<HotBean>> {
+    fun getServerData(): Flowable<HotBean> {
         val retrofit = Retrofit.Builder().baseUrl(Api.DDDD_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
