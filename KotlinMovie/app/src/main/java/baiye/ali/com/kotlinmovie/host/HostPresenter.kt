@@ -1,7 +1,6 @@
 package baiye.ali.com.kotlinmovie.host
 
 
-
 import baiye.ali.com.kotlinmovie.bean.HomeBean
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
@@ -12,11 +11,11 @@ import io.reactivex.subscribers.DisposableSubscriber
  */
 class HostPresenter(frag1View: Frag1View) {
 
-    var frag1view : Frag1View? = frag1View
+    var frag1view: Frag1View? = frag1View
 
-    var hostmodel :HostModel?= HostModel()
+    var hostmodel: HostModel? = HostModel()
 
-    fun relevance(){
+    fun relevance() {
         val flowable = hostmodel!!.Searchdata()
         flowable.subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
