@@ -18,10 +18,10 @@ import com.facebook.drawee.view.SimpleDraweeView
 /**
  * Created by 31962 on 2017/12/28.
  */
- class HostAdapter (list:  ArrayList<ChildHomeBean>,context: Context) : RecyclerView.Adapter<HostAdapter.MyViewHolder>() {
+class HostAdapter(list: ArrayList<ChildHomeBean>, context: Context) : RecyclerView.Adapter<HostAdapter.MyViewHolder>() {
 
     var list: ArrayList<ChildHomeBean> = list
-    var context:Context = context
+    var context: Context = context
     override fun getItemCount(): Int {
         return list.size
     }
@@ -30,11 +30,14 @@ import com.facebook.drawee.view.SimpleDraweeView
 
         holder!!.sdv1.setImageURI(Uri.parse(list.get(position).icon!!))
         holder!!.tv1.setText(list.get(position).title)
-        holder!!.ll1.setOnClickListener(object :View.OnClickListener{
+        holder!!.ll1.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
 
                 val intent = Intent()
                 intent.setClass(context, PlayActivity::class.java)
+
+                intent.putExtra("playurl", list.get(position).playUrl)
+
                // intent.putExtra("childhomebean",list.get(position))
                // intent.putExtra("childhomebean",list.get(position))
                 //intent.putExtra("childhomebean",list.get(position))
@@ -47,6 +50,7 @@ import com.facebook.drawee.view.SimpleDraweeView
                 bundle.putString("blurred",list.get(position).blurred)
 
                 intent.putExtra("play",bundle)
+
                 context.startActivity(intent)
             }
 
@@ -60,10 +64,10 @@ import com.facebook.drawee.view.SimpleDraweeView
     }
 
 
-    class MyViewHolder(view: View) : RecyclerView.ViewHolder(view){
-        var sdv1 : SimpleDraweeView = view!!.findViewById(R.id.sdv_item1) as SimpleDraweeView
-        var tv1:TextView = view!!.findViewById(R.id.tv_item1) as TextView
-        var ll1:LinearLayout = view!!.findViewById(R.id.ll_item1) as LinearLayout
+    class MyViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        var sdv1: SimpleDraweeView = view!!.findViewById<SimpleDraweeView>(R.id.sdv_item1) as SimpleDraweeView
+        var tv1: TextView = view!!.findViewById<TextView>(R.id.tv_item1) as TextView
+        var ll1: LinearLayout = view!!.findViewById<LinearLayout>(R.id.ll_item1) as LinearLayout
 
     }
 }

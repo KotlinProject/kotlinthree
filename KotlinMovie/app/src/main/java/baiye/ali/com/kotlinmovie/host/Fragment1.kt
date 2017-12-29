@@ -17,12 +17,6 @@ class Fragment1 : BaseFragment<HostPresenter>(),Frag1View {
 
     override fun getdata(homeBean: HomeBean) {
 
-        //val date = homeBean.issueList!!.get(1).date
-
-      // homeBean.issueList!!.get(0).itemList!!.get(1)!!.data!!.image
-
-      //  homeBean!!.issueList!![1]!!.itemList!![5]!!.data!!.
-       // homeBean.issueList!![1].itemList!![1]!!.data!!.playUrl
 
         val itemList = homeBean.issueList!![1].itemList
 
@@ -31,13 +25,6 @@ class Fragment1 : BaseFragment<HostPresenter>(),Frag1View {
         var list = ArrayList<ChildHomeBean>()
         for (i in itemList!!.indices) {
 
-           /* val image = i?.data!!.image!!
-            val title = i?.data!!.title!!
-            val description = i?.data!!.description!!
-            val playUrl = i?.data!!.playUrl!!
-
-            var childhomebean: ChildHomeBean? = ChildHomeBean(image!!, title!!, description!!, playUrl!!)!!
-            list!!.add(childhomebean!!)*/
 
             if(i!=0){
                 val itemListBean = itemList[i]

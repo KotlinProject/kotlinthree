@@ -13,11 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".me.activity.SavaActivity" />
         <activity android:name=".me.activity.WatchsActivity" />
@@ -27,6 +23,14 @@
         <activity android:name=".play.PlayActivity" />
         <activity android:name=".search.SearchActivity" />
         <activity android:name=".search.EditActivity"></activity>
+        <activity android:name=".GuideActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

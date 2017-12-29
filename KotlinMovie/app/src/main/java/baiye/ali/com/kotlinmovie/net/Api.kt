@@ -6,5 +6,7 @@ package baiye.ali.com.kotlinmovie.net
 class Api {
     companion object {
         val BASE_URL = "http://baobab.kaiyanapp.com/api/"
+
+        val DDDD_URL = "http://api.svipmovie.com/front/"
     }
 }
