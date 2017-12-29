@@ -12,19 +12,21 @@ import kotlinx.android.synthetic.main.activity_sava.*
 
 class SavaActivity : AppCompatActivity() {
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sava)
 
         //返回上一层
-        fan_sava.setOnClickListener(object : View.OnClickListener{
+        fan_sava.setOnClickListener(object : View.OnClickListener {
             override fun onClick(v: View?) {
 
                 finish()
             }
 
         })
-    }
 
+    }
 
 }

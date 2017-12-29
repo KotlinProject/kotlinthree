@@ -3,6 +3,7 @@ package baiye.ali.com.kotlinmovie.host
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
+import android.os.Bundle
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -34,7 +35,22 @@ class HostAdapter(list: ArrayList<ChildHomeBean>, context: Context) : RecyclerVi
 
                 val intent = Intent()
                 intent.setClass(context, PlayActivity::class.java)
+
                 intent.putExtra("playurl", list.get(position).playUrl)
+
+               // intent.putExtra("childhomebean",list.get(position))
+               // intent.putExtra("childhomebean",list.get(position))
+                //intent.putExtra("childhomebean",list.get(position))
+
+                var bundle = Bundle()
+                bundle.putString("icon",list.get(position).icon)
+                bundle.putString("title",list.get(position).title)
+                bundle.putString("description",list.get(position).description)
+                bundle.putString("playUrl",list.get(position).playUrl)
+                bundle.putString("blurred",list.get(position).blurred)
+
+                intent.putExtra("play",bundle)
+
                 context.startActivity(intent)
             }
 

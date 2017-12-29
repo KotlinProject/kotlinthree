@@ -31,11 +31,12 @@ class Fragment1 : BaseFragment<HostPresenter>(),Frag1View {
                 val data = itemListBean.data
                 val title = data!!.title
                 val detail = data!!.cover?.detail
+                val blurred = data!!.cover?.blurred
                 val description = data!!.description
                 val playUrl = data!!.playUrl
 
 
-                var childhomebean: ChildHomeBean? = ChildHomeBean(detail.toString(), title.toString(), description.toString(), playUrl.toString())
+                var childhomebean: ChildHomeBean? = ChildHomeBean(detail.toString(), title.toString(), description.toString(), playUrl.toString(),blurred.toString())
                 list!!.add(childhomebean!!)
             }
 

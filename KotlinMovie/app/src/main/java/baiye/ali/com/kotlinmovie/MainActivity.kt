@@ -20,10 +20,10 @@ class MainActivity : AppCompatActivity() {
                 .setFontSize(8F)
                 .setTabPadding(4F, 6F, 10F)
                 .setChangeColor(Color.RED, Color.DKGRAY)
-                .addTabItem("首页", R.drawable.home_normal, R.drawable.home_selected, Fragment1::class.java)
-                .addTabItem("发现",R.drawable.find_normal,R.drawable.find_selected,Fragment2::class.java )
-                 .addTabItem("热门", R.drawable.hot_normal, R.drawable.hot_selected, Fragment3::class.java)
-                 .addTabItem("我的", R.drawable.mine_normal,R.drawable.mine_selected ,Fragment4::class.java)
+                .addTabItem("首页", R.drawable.home_selected,  R.drawable.home_normal,Fragment1::class.java)
+                .addTabItem("发现",R.drawable.find_selected,R.drawable.find_normal,Fragment2::class.java )
+                 .addTabItem("热门", R.drawable.hot_selected,R.drawable.hot_normal,  Fragment3::class.java)
+                 .addTabItem("我的",R.drawable.mine_selected , R.drawable.mine_normal,Fragment4::class.java)
                    .isShowDivider(false)
 
 

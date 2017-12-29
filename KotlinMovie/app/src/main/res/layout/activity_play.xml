@@ -10,16 +10,41 @@
     <cn.jzvd.JZVideoPlayerStandard
         android:id="@+id/videoplayer"
         android:layout_width="match_parent"
-        android:layout_height="200dp" />
+        android:layout_height="400dp" />
 
-    <TextView
-        android:id="@+id/tv_play_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:id="@+id/tv_play_describe"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/sdv_fram"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_play_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25sp"
+                android:text="啦啦啦"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                />
+            <TextView
+                android:id="@+id/tv_play_describe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"/>
+
+        </LinearLayout>
+    </FrameLayout>
+
+
 
 
 </LinearLayout>

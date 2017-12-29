@@ -42,9 +42,6 @@ class Fragment4 : BaseFragment<MePresenter>(){
         image.setOnClickListener(object :View.OnClickListener{
             override fun onClick(v: View?) {
 
-              /*  var intent = Intent(activity, UpdownActivity::class.java)
-                startActivity(intent)*/
-
                showChoosePicDialog()
 
             }
@@ -103,7 +100,7 @@ class Fragment4 : BaseFragment<MePresenter>(){
         builder.setItems(items) { dialog, which ->
             when (which) {
              // 选择本地照片
-                CHOOSE_PICTURE -> {
+                    CHOOSE_PICTURE -> {
                     val openAlbumIntent = Intent(Intent.ACTION_GET_CONTENT)
                     openAlbumIntent.type = "image/*"
                     //用startActivityForResult方法，重写onActivityResult()方法，拿到图片做裁剪操作

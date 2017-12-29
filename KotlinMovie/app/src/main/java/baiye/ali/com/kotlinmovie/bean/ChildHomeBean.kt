@@ -6,7 +6,13 @@ package baiye.ali.com.kotlinmovie.bean
 class ChildHomeBean(val icon:String,
                     val title:String,
                     val description:String,
-                    val playUrl:String
+                    val playUrl:String,
+                    val blurred:String
                     ) {
+
+
+
+
+
 
 }
