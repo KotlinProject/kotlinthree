@@ -44,6 +44,7 @@ import com.facebook.drawee.view.SimpleDraweeView
                 bundle.putString("title",list.get(position).title)
                 bundle.putString("description",list.get(position).description)
                 bundle.putString("playUrl",list.get(position).playUrl)
+                bundle.putString("blurred",list.get(position).blurred)
 
                 intent.putExtra("play",bundle)
                 context.startActivity(intent)
