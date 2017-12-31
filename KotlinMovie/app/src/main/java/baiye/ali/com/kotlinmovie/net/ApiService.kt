@@ -29,7 +29,7 @@ interface ApiService {
     fun getSearchData(@Query("num") num: Int, @Query("query") query: String, @Query("start") start: Int): Flowable<SearchBean>
 
     @GET("homePageApi/homePage.do")
-    fun getDDDD(): Flowable<List<HotBean>>
+    fun getDDDD(): Flowable<HotBean>
 
 
 }

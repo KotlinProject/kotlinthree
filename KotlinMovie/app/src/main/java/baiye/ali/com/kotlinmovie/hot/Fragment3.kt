@@ -11,12 +11,12 @@ import kotlinx.android.synthetic.main.fragment3.*
  * Created by 31962 on 2017/12/27.
  */
 class Fragment3 : BaseFragment<HotPresenter>(), HotView {
-    override fun getdata(hotbean: List<HotBean>) {
+    override fun getdata(hotbean: HotBean) {
 
-        val list = hotbean.get(0).ret!!.list!!.get(0).childList
+        val list = hotbean.ret!!.list!!.get(0).childList
 
-        Log.i("xxx", hotbean.get(0).ret!!.list!!.get(0).title)
-        val hotAdapter = HotAdapter(list!!, this!!.activity)
+        Log.i("xxx", hotbean.ret!!.list!!.get(0).title)
+        val hotAdapter = HotAdapter(list!!, activity)
         recyview.adapter = hotAdapter
 
     }
