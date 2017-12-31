@@ -32,7 +32,7 @@ class Fragment3 : BaseFragment<HotPresenter>(), HotView {
 //    }
 
     override fun getPresenter(): HotPresenter {
-        var hotpresenter: HotPresenter = HotPresenter(this)
+        var hotpresenter = HotPresenter(this)
         return hotpresenter
 
     }
